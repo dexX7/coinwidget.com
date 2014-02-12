@@ -1,9 +1,10 @@
 /**
 
 Donations welcome:
-	BTC: 122MeuyZpYz4GSHNrF98e6dnQCXZfHJeGS
-	LTC: LY1L6M6yG26b4sRkLv4BbkmHhPn8GR5fFm
-		~ Thank you!
+  BTC: 122MeuyZpYz4GSHNrF98e6dnQCXZfHJeGS
+  LTC: LY1L6M6yG26b4sRkLv4BbkmHhPn8GR5fFm
+  MSC: 1JCwo8qnjDquGnx44N81NNehqytksL92zM
+    ~ Thank you!
 
 ------------
 
@@ -11,6 +12,7 @@ MIT License (MIT)
 
 Copyright (c) 2013 http://coinwidget.com/ 
 Copyright (c) 2013 http://scotty.cc/
+Copyright (c) 2014 http://bitwatch.co/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +33,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 */
+
+.COINWIDGETCOM_CONTAINER,
+.COINWIDGETCOM_CONTAINER *,
+.COINWIDGETCOM_WINDOW,
+.COINWIDGETCOM_WINDOW * {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
 
 /* button */
 .COINWIDGETCOM_CONTAINER {height:18px;display:inline-block;font-family:arial;line-height:12px;margin-right:5px;}
@@ -80,7 +91,7 @@ THE SOFTWARE.
 
 /* window elements */
 .COINWIDGETCOM_WINDOW > label {font-size:12px;font-weight:bold;color:#444;display:block;width:250px;padding:3px;text-shadow:0px -1px 0px #fff;}
-.COINWIDGETCOM_WINDOW > input {padding:4px 3px 4px 20px;border-radius:2px 2px 2px 2px;border:1px solid #ccc;display:block;width:210px;font-size:10px;margin-bottom:5px;}
+.COINWIDGETCOM_WINDOW > input {padding:4px 3px 4px 20px;border-radius:2px 2px 2px 2px;border:1px solid #ccc;display:block;font-size:10px;margin-bottom:5px;}
 .COINWIDGETCOM_WINDOW > a.COINWIDGETCOM_CLOSER {position:absolute;top:3px;right:7px;color:#666;font-weight:bold;text-decoration:none;}
 .COINWIDGETCOM_WINDOW > a.COINWIDGETCOM_CLOSER:hover {color:#aaa;}
 .COINWIDGETCOM_WINDOW > img {position:absolute;border:none;margin:0px;padding:0px;}
@@ -89,8 +100,11 @@ THE SOFTWARE.
 .COINWIDGETCOM_WINDOW > span {float: left;font-size:12px;font-weight:bold;display: block;width: 115px;text-align: left;border: 1px solid #ffeeb3;background: #fff8ef;text-shadow:0px -1px 0px #fffefa;padding: 5px;margin-right: 4px;box-shadow: inset 1px 1px 0px #fff;color:#444!important;}
 .COINWIDGETCOM_WINDOW > span.end {margin-right:0px;}
 .COINWIDGETCOM_WINDOW > span > small {display:block;font-size:11px;font-weight:normal;}
-.COINWIDGETCOM_WINDOW > a.COINWIDGETCOM_CREDITS {position:absolute;bottom:5px;right:5px;font-size:11px;color:#555;text-decoration:none;text-shadow:0px -1px 0px #fff;}
-.COINWIDGETCOM_WINDOW > a.COINWIDGETCOM_CREDITS:hover {color:#111;}
+.COINWIDGETCOM_CREDITS {position:absolute;bottom:5px;right:5px;font-size:11px;color:#444;text-decoration:none;text-shadow:0px -1px 0px #fff;}
+.COINWIDGETCOM_CREDITS_LINK {font-size:11px;color:#555;text-decoration:none;text-shadow:0px -1px 0px #fff;}
+.COINWIDGETCOM_CREDITS_LINK:hover {color:#111;}
 .COINWIDGETCOM_WINDOW > img.COINWIDGETCOM_QRCODE {position:absolute;bottom:5px;left:6px;}
 .COINWIDGETCOM_WINDOW > img.COINWIDGETCOM_QRCODE_LARGE {position:absolute;bottom:5px;left:30px;display:none;border:1px solid #333;border-radius:4px;z-index:99999999;box-shadow:0px 0px 8px rgba(0,0,0,0.5);}
 
+.INPUT_WITH_BUTTON {width:210px;}
+.INPUT_WITHOUT_BUTTON {width:233px;}
