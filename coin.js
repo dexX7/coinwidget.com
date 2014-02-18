@@ -274,7 +274,7 @@ if(typeof CoinWidgetCom != 'object')
                 $("[data-coinwidget-instance='" + i + "']")
                   .find('> span')
                   .html(config.counter == 'count' ? v.count : v.amount.toFixed(config.decimals) + ' ' +
-                    $config.lbl_amount);
+                    config.lbl_amount);
                 if(config.auto_show) {
                   $("[data-coinwidget-instance='" + i + "']")
                     .find('> a')
