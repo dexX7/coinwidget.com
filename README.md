@@ -89,7 +89,6 @@ See the files: [**example-1.html**](./example-1.html) and [**example-2.html**](.
       
     }, "#msctip");
   </script>
-  </script>
 ```
 
 A list of available options and acceptable values can be found on [coinwidget.com](http://coinwidget.com/).
