@@ -3,40 +3,50 @@ CoinWidget.com (msc-mod)
 
 *The Bitcoin, Litecoin and Mastercoin Donation Button*
 
-Visit http://coinwidget.com/ for full documentation, demo, and a link code wizard.
+**Button preview:**
 
-CoinWidget was initially created by http://scotty.cc/.
+<img src="http://bitwatch.co/tips//preview_button.png">
 
-Improvements were made by [q--](https://github.com/q--/coinwidget.com).
+**Clicking the button shows more details:**
 
-This version ("msc-mod") adds the currency Mastercoin and uses one of the following data providers:
+<img src="http://bitwatch.co/tips//preview_box.png">
 
-	https://masterchest.info/
-	http://www.mymastercoins.com/
-	https://masterchain.info/
-	http://mastercoin-explorer.com/
+CoinWidget was initially created by http://scotty.cc/. Improvements were made by [q--](https://github.com/q--/coinwidget.com).
 
-Released under the Open Source **MIT License** (see **LICENSE** file for details).
+Visit http://coinwidget.com/ for the full documentation, demo, and a code wizard of the original.
+
+With this version ("**msc-mod**") it is possible to build a [Mastercoin](http://mastercoin.org) donation button.
+
+The following data providers can be used to fetch data:
+
+	masterchest.info
+	mymastercoins.com
+	masterchain.info
+	mastercoin-explorer.com
+
+
+
+Released under the Open Source **MIT License** (see [**LICENSE**](./LICENSE) file for details).
 
 
 Installation
 ==============
 A. Download all files from GitHub: https://github.com/dexX7/coinwidget.com
 
-B. Open **coin.js** and find:
+B. Open [**coin.js**](https://github.com/dexX7/coinwidget.com/blob/master/coin.js#L46) and find:
 
-	source: 'http://mastercoin-faucet.com/tips/'
+	source: 'http://bitwatch.co/tips/'
 
 C. Change the URL portion of this line to your own server/path.
 
-D. (optional) To use an external CSS file, edit **coin.js** and set the following statement true:
+D. (optional) To use an external CSS file, edit **coin.js** and change [**line 473**](./coin.js#L473) to:
 
-	stylesheet_loaded: false
-  
-E. (optional) If you already load JQuery somewhere else, edit **coin.js** and set the following statement true:
+	stylesheet_loaded: true
 
-	loading_jquery: false
-  
+E. (optional) If you load JQuery somewhere else, edit **coin.js** and change [**line 493**](./coin.js#L493) to:
+
+	loading_jquery: true
+
 F. (optional) Open **lookup.php** and change data provider. This can be easily done by uncommenting a few lines of code.
 
 G. (optional) Create your own implementation of lookup.php, stop using web APIs to fetch data or add more currencies.
@@ -51,14 +61,41 @@ Watch out for **call to action** comments in the source code.
 Example code and usage
 ==============
 
-See the files: **example-1.html** and **example-2.html**
+See the files: [**example-1.html**](./example-1.html) and [**example-2.html**](./example-2.html)
 
-A list of available options and acceptable values can be found on http://coinwidget.com/.
+```html
+  <span id="msctip">Tip Mastercoins</span>
+  <!--The rest of the HTML document-->
+    
+  <script src="coin.js"></script>
+  <script>
+    CoinWidgetCom.go({
+    
+      /**
+       * Call to action:
+       * Replace wallet_address with your Mastercoin address and 
+       * adjust configuration optionally.
+       */
+      wallet_address: "1JCwo8qnjDquGnx44N81NNehqytksL92zM",
+      
+      currency: "mastercoin",
+      qrcode: false,
+      send_button: false,
+      auto_show: false,
+      lbl_address: "Donate MSC to this address:",
+      lbl_count: "tips received",
+      lbl_amount: "MSC",
+      alignment: "bl",
+      
+    }, "#msctip");
+  </script>
+  </script>
+```
 
-Note: the option **send_button** is new and allows to hide the "click here to open wallet" button.
+A list of available options and acceptable values can be found on [coinwidget.com](http://coinwidget.com/).
+
+The option **send_button** is new and allows to hide the "click here to open wallet" button and is not documented on [coinwidget.com](http://coinwidget.com/).
 
 
 ==============
-*If you run into a bug, or if you need help or have an idea please e-mail:
-coinwidget.com@gmail.com (original author)
-dexx@bitwatch.co (msc-mod)*
+*If you run into a bug, please e-mail coinwidget.com@gmail.com (original author) or dexx@bitwatch.co (msc-mod).*
