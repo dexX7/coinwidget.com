@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CoinWidget.com (msc-mod) example</title>
+  </head>
+  <body>
+  
+    <p>You can enter the button text directly. This will overwrite <em>lbl_button</em>.</p>
+    
+    <p>It's also possible to define any options at the bottom of the page, but don't forget 
+    to submit the element's <em>id</em> or <em>class</em>.</p>
+    
+    <span id="tipper">I'm a donation button and this text was defined right here!</span>
+    <!--The rest of the HTML document-->
+    
+    <script src="coin.js"></script>
+    <script>
+      CoinWidgetCom.go({
+      
+        /**
+         * Call to action:
+         * Replace wallet_address with your Mastercoin address and 
+         * adjust configuration optionally.
+         */
+        wallet_address: "1JCwo8qnjDquGnx44N81NNehqytksL92zM",
+        
+        currency: "mastercoin",
+        counter: "count",
+        alignment: "bl",
+        qrcode: false,
+        auto_show: false,
+        lbl_button: "This will be overwriten. You can also delete this line.",
+        lbl_address: "Donate Mastercoins to this address:",
+        lbl_count: "tips received",
+        lbl_amount: "MSC",
+        send_button: false,
+        
+      }, "#tipper");
+    </script>
+    
+    <!--
+      Donations welcome:
+        BTC: 122MeuyZpYz4GSHNrF98e6dnQCXZfHJeGS
+        LTC: LY1L6M6yG26b4sRkLv4BbkmHhPn8GR5fFm
+        MSC: 1JCwo8qnjDquGnx44N81NNehqytksL92zM
+          ~ Thank you!
+
+
+      MIT License (MIT)
+
+      Copyright (c) 2013 http://coinwidget.com/ 
+      Copyright (c) 2013 http://scotty.cc/
+      Copyright (c) 2014 http://bitwatch.co/
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software"), to deal
+      in the Software without restriction, including without limitation the rights
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice shall be included in
+      all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+      THE SOFTWARE.
+    -->
+  </body>
+</html>

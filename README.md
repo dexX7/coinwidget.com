@@ -29,13 +29,13 @@ B. Open **coin.js** and find:
 
 C. Change the URL portion of this line to your own server/path.
 
-D. (optional) Find the following line and replace CSS file:
+D. (optional) To use an external CSS file, edit **coin.js** and set the following statement true:
 
-	href   : CoinWidgetCom.source+'coin.css'
+	stylesheet_loaded: false
   
-E. (optional) Find the following line and replace JQuery file:
+E. (optional) If you already load JQuery somewhere else, edit **coin.js** and set the following statement true:
 
-	source    : $prefix + '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'
+	loading_jquery: false
   
 F. (optional) Open **lookup.php** and change data provider. This can be easily done by uncommenting a few lines of code.
 
@@ -51,7 +51,7 @@ Watch out for **call to action** comments in the source code.
 Example code and usage
 ==============
 
-See the file: **code-sample.html**
+See the files: **example-1.html** and **example-2.html**
 
 A list of available options and acceptable values can be found on http://coinwidget.com/.
 

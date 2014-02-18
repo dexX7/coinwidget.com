@@ -5,34 +5,32 @@
     <title>CoinWidget.com (msc-mod) example</title>
   </head>
   <body>
+  
+    <p>In this example the button will appear where you call <em>CoinWidgetCom.go</em>.</p>
     
-    <span id="mastercoin_tipper"></span>
-    <br />
-    <!--The rest of the HTML document-->
-
     <script src="coin.js"></script>
     <script>
     CoinWidgetCom.go({
-
-        /**
-         * Call to action:
-         * Replace wallet_address with your Mastercoin address and 
-         * adjust configuration optionally.
-         */
-        wallet_address: "1JCwo8qnjDquGnx44N81NNehqytksL92zM"
-
-        , currency: "mastercoin"
-        , counter: "count"
-        , alignment: "bl"
-        , qrcode: false
-        , auto_show: false
-        , lbl_button: "Tip Mastercoins"
-        , lbl_address: "Donate Mastercoins to this address:"
-        , lbl_count: "tips received"
-        , lbl_amount: "MSC"
-        , send_button: false
-    }, "#mastercoin_tipper");
-    </script>  
+    
+      /**
+       * Call to action:
+       * Replace wallet_address with your Mastercoin address and 
+       * adjust configuration optionally.
+       */
+      wallet_address: "1JCwo8qnjDquGnx44N81NNehqytksL92zM",
+      
+      currency: "mastercoin",
+      counter: "count",
+      alignment: "bl",
+      qrcode: false,
+      auto_show: false,
+      lbl_button: "Tip Mastercoins",
+      lbl_address: "Donate Mastercoins to this address:",
+      lbl_count: "tips received",
+      lbl_amount: "MSC",
+      send_button: false,
+    });
+    </script>
     
     <!--
       Donations welcome:
@@ -68,4 +66,3 @@
     -->
   </body>
 </html>
-

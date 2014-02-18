@@ -101,8 +101,8 @@ THE SOFTWARE.
 .COINWIDGETCOM_WINDOW > span.end {margin-right:0px;}
 .COINWIDGETCOM_WINDOW > span > small {display:block;font-size:11px;font-weight:normal;}
 .COINWIDGETCOM_CREDITS {position:absolute;bottom:5px;right:5px;font-size:11px;color:#444;text-decoration:none;text-shadow:0px -1px 0px #fff;}
-.COINWIDGETCOM_CREDITS_LINK {font-size:11px;color:#555;text-decoration:none;text-shadow:0px -1px 0px #fff;}
-.COINWIDGETCOM_CREDITS_LINK:hover {color:#111;}
+.COINWIDGETCOM_CREDITS > a {font-size:11px;color:#555;text-decoration:none;text-shadow:0px -1px 0px #fff;}
+.COINWIDGETCOM_CREDITS > a:hover {color:#111;}
 .COINWIDGETCOM_WINDOW > img.COINWIDGETCOM_QRCODE {position:absolute;bottom:5px;left:6px;}
 .COINWIDGETCOM_WINDOW > img.COINWIDGETCOM_QRCODE_LARGE {position:absolute;bottom:5px;left:30px;display:none;border:1px solid #333;border-radius:4px;z-index:99999999;box-shadow:0px 0px 8px rgba(0,0,0,0.5);}
 
